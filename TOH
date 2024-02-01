@@ -10,7 +10,6 @@ int recursion(int x , char beg,char aux,char end){
 		recursion(x-1,aux,end,beg);
     }
 }
-
 int main(){
     int x;
     cout<<"Enter the no of disks "<<endl;
