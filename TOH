@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int recursion(int x , char beg,char aux,char end){
+    if(x==0)
+    return 0;
+    else{
+        recursion(x-1,beg,aux,end);
+        	cout << "Move disk " << x << " from rod " << beg 
+		<< " to rod " << aux << endl; 
+		recursion(x-1,aux,end,beg);
+    }
+}
+
+int main(){
+    int x;
+    cout<<"Enter the no of disks "<<endl;
+    cin>>x;
+    recursion(x,'A','B','C');
+}
